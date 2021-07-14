@@ -31,7 +31,7 @@
     </form>
     <div class="form-group">
         <label>VND</label>
-        <input class="form-control" name="vnd" type="number" value="${vnd}">
+        <input class="form-control" name="vnd" type="number" value="${vnd}" disabled>
     </div>
 </div>
 

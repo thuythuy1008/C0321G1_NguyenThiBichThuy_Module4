@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class DictionaryController {
     @Autowired
-    private DictionaryService service;
+    private DictionaryService dictionaryService;
 
     @GetMapping("/")
     public String showForm() {
@@ -19,9 +19,9 @@ public class DictionaryController {
     }
 
     @GetMapping("/dictionary")
-    public String dictionaryController(@RequestParam String english, Model model) {
+    public String result(@RequestParam String english, Model model) {
         model.addAttribute("eng", english);
-        model.addAttribute("viet", service.find(english));
+        model.addAttribute("viet", dictionaryService.find(english));
         return "index";
     }
 }

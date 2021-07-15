@@ -18,7 +18,7 @@ public class CalculateServiceImpl implements CalculateService {
             result = numberFirst * numberSecond;
         } else {
             if (numberSecond == 0) {
-                print = "Không thể chia cho 0";
+                print = "Khong the chia cho 0";
                 return print;
             }
             result = numberFirst / numberSecond;
